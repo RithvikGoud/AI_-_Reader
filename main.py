@@ -40,7 +40,7 @@ def delete_data(save_dir: str,model: str="models/embedding-001"):
     vectore_store=FAISS.load_local(save_dir,embeddings=embeddings,allow_dangerous_deserialization=True)
     vectore_store.index.reset()
     vectore_store.save_local(save_dir)
-    file_path=r"C:\Users\ganesh\Desktop\LangChain\Store\index.pkl"
+    file_path=r"C:\Users\ganesh\Desktop\LangChain\Store\index.pkl" # Run the application and upload pdf,then paste the path of index.pkl file from your pc.
     empty_data={}
     with open(file_path,"wb") as f:
         pickle.dump(empty_data,f)
